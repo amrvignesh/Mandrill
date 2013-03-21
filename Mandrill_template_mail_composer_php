@@ -1,12 +1,6 @@
 <?php
 
-$args = array(
-    'key' => 'xxx',
-    'template_name' => 'template-id',
-    'template_content' => array(
-      "name" => "content-id",
-    	"content" => "<h3>Hello!</h3><p>World!!</p>"
-    ),
+
     'message' => array(
         "from_email" => "mail@example.com",
         "from_name" => "from_name",
