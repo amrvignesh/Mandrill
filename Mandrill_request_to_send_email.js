@@ -1,3 +1,3 @@
 /*the mandrill json request template foe sending a mail with mailchimp template  */
 
-/*need Mandrill API key*/
+/*need Mandrill API key and mailchimp template Id*/
