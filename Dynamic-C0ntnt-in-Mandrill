@@ -1,0 +1,11 @@
+Editable regions are taken from the MailChimp template language (Template Language: Creating Editable Content Areas: http://eepurl.com/ck4Nz - note that only the mc:edit tags are supported for Mandrill at this time), and are generally useful if you'll need to inject code or large amounts of content into your template.  You would add mc:edit with a unique identifier to a specific area in your template, like this:
+
+<div mc:edit="bodyContent">
+This is placeholder content.
+</div>
+
+Then, when you make an API call for messages/send-template, you'd specify "bodyContent" as the name of the region (for template_content), and then provide your content which will replace everything in that tag (but not modifying the tag iteself). In this case "This is placeholder content." would be replaced with the content you specify.
+
+You can also use merge tags in your templates to provide names, dates, and the like. Mergetags take the form of *|MERGETAG|*
+
+In the messages/send or messages/send-template API call, you can specify recipient-specific values and/or global values (to be used for everyone who doesn't have a recipient-specific value) using merge_vars and global_merge_vars.  The name of the merge tag is the text between the pipes (in the above example, the merge_var name is MERGETAG.
