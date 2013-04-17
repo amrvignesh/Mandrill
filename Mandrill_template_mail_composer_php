@@ -31,6 +31,7 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($args));
 $response = curl_exec($curl);
 curl_close($curl);
 
-print_r($response);
+/* Test code */
+//print_r($response);
 
 ?>
