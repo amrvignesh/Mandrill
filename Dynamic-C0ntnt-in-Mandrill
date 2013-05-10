@@ -1,7 +1,9 @@
+Note:
+
 Editable regions are taken from the MailChimp template language (Template Language: Creating Editable Content Areas: http://eepurl.com/ck4Nz - note that only the mc:edit tags are supported for Mandrill at this time), and are generally useful if you'll need to inject code or large amounts of content into your template.  You would add mc:edit with a unique identifier to a specific area in your template, like this:
 
 <div mc:edit="bodyContent">
-This is placeholder content.
+  This is placeholder content.
 </div>
 
 Then, when you make an API call for messages/send-template, you'd specify "bodyContent" as the name of the region (for template_content), and then provide your content which will replace everything in that tag (but not modifying the tag iteself). In this case "This is placeholder content." would be replaced with the content you specify.
