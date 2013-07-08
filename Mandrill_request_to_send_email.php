@@ -1,9 +1,9 @@
 <?php
-/*the mandrill json request template foe sending a mail with mailchimp template  */
+/* the mandrill json request template foe sending a mail with mailchimp template */
 
-/*need Mandrill API key and mailchimp template Id*/
+/* need Mandrill API key and mailchimp template Id */
 
-/**
+/*
  * This examples shows how Mandrill library is used to send a message.
  */
 
